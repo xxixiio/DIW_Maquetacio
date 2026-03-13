@@ -1,33 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ca">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant Els Coberts</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Prata&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <header class="header__container">
-        <nav class="header__nav">
-            <ul class="header__list">
-                <li class="header__link"><a href="">Nosaltres</a></li>
-                <li class="header__link"><a href="">Carta</a></li>
-                <li class="header__link"><a href="">Galeria</a></li>
-            </ul>
-        </nav>
+      <nav class="header__nav">
+        <h2 class="header__title">Restaurant Els Coberts</h2>
+        <ul class="header__list">
+          <li class="header__link"><a href="">Nosaltres</a></li>
+          <li class="header__link"><a href="">Carta</a></li>
+          <li class="header__link"><a href="">Galeria</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <div class="hero__container">
-            <div class="hero__text">
-                <h1>Restaurant els coberts</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="hero__image_container">
-                <img class="hero__image" src="img/hero-image-restaurant.jpg" alt="Imatge del local 'Restaurant Els Coberts'">
-            </div>
+      <section class="hero__container">
+        <div class="hero__text">
+          <h1>Restaurant Els Coberts</h1>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
         </div>
-        <a class="btn__reserva" href="#reservar">Reservar</a>
+        <div class="hero__image-container">
+          <img
+            class="image"
+            src="img/hero-image-restaurant.jpg"
+            alt="Imatge del local 'Restaurant Els Coberts'"
+          />
+        </div>
+      </section>
+      <section class="section__container">
+        <h2 class="section__title">Sobre nosaltres</h2>
+        <article>
+          <div class="aboutus__image-container">
+            <img
+              class="image"
+              src="img/hero-image-restaurant.jpg"
+              alt="placeholder"
+            />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+            recusandae ratione impedit architecto, nostrum fuga numquam velit
+            sint est quas ut nihil nam enim autem ab ullam ipsum, esse voluptas!
+          </p>
+        </article>
+        <article>
+          <div class="aboutus__image-container">
+            <img
+              class="image"
+              src="img/hero-image-restaurant.jpg"
+              alt="placeholder"
+            />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+            recusandae ratione impedit architecto, nostrum fuga numquam velit
+            sint est quas ut nihil nam enim autem ab ullam ipsum, esse voluptas!
+          </p>
+        </article>
+      </section>
+      <section class="section__container">
+        <h2 class="section__title">Carta</h2>
+      </section>
+      <section class="section__container">
+        <h2 class="section__title">Galeria d'imatges</h2>
+        <article class="gallery__container">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </article>
+      </section>
+      <a class="btn__reserva" href="#reservar">Reservar</a>
     </main>
-    <footer></footer>
-</body>
+    <footer class="footer__container">
+      <div>
+        <p>
+          <span class="material-icons"> mail </span>
+          <a href="mail:exemple@exemple.com">exemple@exemple.com</a>
+        </p>
+        <p>
+          <span class="material-icons"> call </span>
+          <a href="tel:+34999999999">+34 999 99 99 99</a>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

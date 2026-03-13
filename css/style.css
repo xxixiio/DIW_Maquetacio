@@ -1,58 +1,143 @@
+:root {
+  --bg-color: #f6f1e7;
+  --primary: rgb(35, 69, 44);
+  --primary-hover: rgb(62, 95, 71);
+  --border-radius: 6px;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Prata", serif;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
-.header__list {
-    display: flex;
+.header__container {
+  position: sticky;
+  top: 0;
+  color: var(--primary);
+  background-color: var(--bg-color);
+  z-index: 10;
+  border-bottom: 2px solid var(--primary);
+  -webkit-box-shadow: 0px 2px 16px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 16px 1px rgba(0, 0, 0, 0.15);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2.5rem;
 }
 
 .header__link {
+  a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+}
+
+.header__list {
+  display: flex;
+  gap: 2rem;
 }
 
 .hero__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero__text {
-    position: absolute;
-    background-color: #222222d7;
-    color: white;
-    padding: 3rem;
-    padding-right: 8rem;
-    margin-left: 3rem;
-    border-radius: 6px;
+  position: absolute;
+  background-color: var(--primary);
+  opacity: 0.9;
+  color: white;
+  padding: 2rem;
+  padding-right: 7rem;
+  margin-left: 3rem;
+  border-radius: var(--border-radius);
 }
 
-.hero__image_container {
-    width: 100vw;
-    height: 85vh;
+.hero__image-container {
+  width: 100vw;
+  height: 85vh;
 }
 
-.hero__image {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .btn__reserva {
-    position: fixed;
-    background-color: #12203E;
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 6px;
-    bottom: 32px;
-    right: 32px;
+  position: fixed;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  bottom: 32px;
+  right: 32px;
+  transition: background 0.12s ease-in;
+
+  &:hover {
+    background-color: var(--primary-hover);
+  }
 }
+
+.section__container {
+  padding: 3rem 5rem;
+}
+
+.section__title {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.aboutus__image-container {
+  width: 300px;
+  height: 300px;
+}
+
+.gallery__container {
+  --gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+
+  & > div {
+    background-color: blue;
+    height: 200px;
+    flex-basis: calc(25% - var(--gap));
+  }
+}
+
+/* @media (max-width: 700px) {
+  .gallery__container {
+    --gap: 20px;
+    & > div {
+      flex-basis: calc(50% - var(--gap));
+    }
+  }
+} */
