@@ -53,11 +53,9 @@ a {
   padding: 0.5rem 2.5rem;
 }
 
-.header__link {
-  a:hover {
-    color: var(--primary);
-    text-decoration: underline;
-  }
+.header__link > a:hover {
+  color: var(--primary);
+  text-decoration: underline;
 }
 
 .header__list {
@@ -91,6 +89,7 @@ a {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  border-radius: var(--border-radius);
 }
 
 .btn__reserva {
@@ -102,10 +101,10 @@ a {
   bottom: 32px;
   right: 32px;
   transition: background 0.12s ease-in;
+}
 
-  &:hover {
-    background-color: var(--primary-hover);
-  }
+.btn__reserva:hover {
+  background-color: var(--primary-hover);
 }
 
 .section__container {
@@ -115,6 +114,7 @@ a {
 .section__title {
   font-size: 2rem;
   color: var(--primary);
+  margin-bottom: 2rem;
 }
 
 .aboutus__container {
@@ -124,12 +124,8 @@ a {
 }
 
 .aboutus__image-container {
-  width: 300px;
-  height: 300px;
-
-  & > .image {
-    border-radius: var(--border-radius);
-  }
+  width: 250px;
+  height: 250px;
 }
 
 .aboutus__content {
@@ -149,20 +145,18 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap);
+}
 
-  & > div {
-    background-color: blue;
-    height: 200px;
-    flex-basis: calc(25% - var(--gap));
-  }
+.gallery__container > div {
+  background-color: blue;
+  height: 200px;
+  flex-basis: calc(25% - var(--gap));
 }
 
 @media (max-width: 700px) {
-  .gallery__container {
+  .gallery__container > div {
     --gap: 20px;
-    & > div {
-      flex-basis: calc(50% - var(--gap));
-    }
+    flex-basis: calc(50% - var(--gap));
   }
 }
 
@@ -184,8 +178,8 @@ a {
 
 .footer__link {
   color: var(--alt-text-color);
+}
 
-  &:hover {
-    text-decoration: underline;
-  }
+.footer__link:hover {
+  text-decoration: underline;
 }
