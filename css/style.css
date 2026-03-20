@@ -54,7 +54,7 @@ a {
 }
 
 .header__link > a:hover {
-  color: var(--primary);
+  /* color: var(--primary); */
   text-decoration: underline;
 }
 
@@ -124,8 +124,7 @@ a {
 }
 
 .aboutus__image-container {
-  width: 250px;
-  height: 250px;
+  width: 100%;
 }
 
 .aboutus__content {
@@ -134,10 +133,78 @@ a {
   gap: 20px;
   align-items: center;
   margin-bottom: 40px;
+  justify-items: start;
 }
 
 .aboutus__content--reversed {
   grid-template-columns: 1fr 300px;
+  justify-items: end;
+}
+
+.carta__title {
+  font-size: 1.75rem;
+  border: 2px dashed #000;
+  border-radius: var(--border-radius);
+  margin-bottom: 3rem;
+  text-align: center;
+  padding: .5rem;
+}
+
+.menu__container {
+  display: grid;
+  grid-template-columns: 20% 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    "m1 c1 c1"
+    "m1 c1 c1"
+    "m2 c2 c2"
+    "m2 c2 c2";
+    row-gap: 3rem;
+    column-gap: 5rem;
+}
+
+#m1 {
+  grid-area: m1;
+}
+
+#c1 {
+  grid-area: c1;
+}
+
+#m2 {
+  grid-area: m2;
+}
+
+#c2 {
+  grid-area: c2;
+}
+
+.menu__title {
+  /* background-color: #c4c4c4; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px dashed #000;
+  border-radius: var(--border-radius);
+}
+
+.menu__info-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.menu__images {
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.menu__image-container {
+  width: 100%;
 }
 
 .gallery__container {
@@ -150,7 +217,19 @@ a {
 .gallery__container > div {
   background-color: blue;
   height: 200px;
+  border: 1px solid #00000079 ;
   flex-basis: calc(25% - var(--gap));
+}
+
+/* .gallery__container > div:nth-child(1), div:nth-child(4), div:nth-child(5), div:nth-child(8) { */
+.gallery__container > div:nth-child(4n + 1), div:nth-child(4n) {
+  /* background-color: purple; */
+  filter: brightness(.75);
+}
+
+.gallery__container > div:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 700px) {
