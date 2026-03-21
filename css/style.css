@@ -15,6 +15,10 @@
   font-family: "Inter", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bg-color);
 }
@@ -51,6 +55,14 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 2.5rem;
+}
+
+.header__nav > a:hover {
+  text-decoration: underline;
+}
+
+.header__title {
+  color: var(--primary);
 }
 
 .header__link > a:hover {
@@ -115,6 +127,7 @@ a {
   font-size: 2rem;
   color: var(--primary);
   margin-bottom: 2rem;
+  scroll-margin-top: 100px; /* Marge per que el header (fixed), no tapi els títols */
 }
 
 .aboutus__container {
@@ -217,8 +230,9 @@ a {
 .gallery__container > div {
   background-color: blue;
   height: 200px;
-  border: 1px solid #00000079 ;
-  flex-basis: calc(25% - var(--gap));
+  border: 1px solid #00000079;
+  width: calc(25% - var(--gap));
+  transition: box-shadow .12s ease-out;
 }
 
 /* .gallery__container > div:nth-child(1), div:nth-child(4), div:nth-child(5), div:nth-child(8) { */
@@ -229,13 +243,13 @@ a {
 
 .gallery__container > div:hover {
   cursor: pointer;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px 3px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 700px) {
   .gallery__container > div {
     --gap: 20px;
-    flex-basis: calc(50% - var(--gap));
+    width: calc(50% - var(--gap));
   }
 }
 

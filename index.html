@@ -19,11 +19,15 @@
   <body>
     <header class="header__container">
       <nav class="header__nav">
-        <h2 class="header__title">Restaurant Els Coberts</h2>
+        <a href="#">
+          <h2 class="header__title">
+            Restaurant Els Coberts
+          </h2>
+        </a>
         <ul class="header__list">
-          <li class="header__link"><a href="">Nosaltres</a></li>
-          <li class="header__link"><a href="">Carta</a></li>
-          <li class="header__link"><a href="">Galeria</a></li>
+          <li class="header__link"><a href="#nosaltres">Nosaltres</a></li>
+          <li class="header__link"><a href="#carta">Carta</a></li>
+          <li class="header__link"><a href="#galeria">Galeria</a></li>
         </ul>
       </nav>
     </header>
@@ -42,7 +46,7 @@
         </div>
       </section>
       <section class="section__container">
-        <h2 class="section__title">Sobre nosaltres</h2>
+        <h2 class="section__title" id="nosaltres">Sobre nosaltres</h2>
         <article class="aboutus__content">
           <div class="aboutus__image-container">
             <img
@@ -81,7 +85,7 @@
         </article>
       </section>
       <section class="section__container">
-        <h2 class="section__title">Carta</h2>
+        <h2 class="section__title" id="carta">Carta</h2>
         <h3 class="carta__title">Menú</h3>
         <article class="menu__container">
           <h3 class="menu__title" id="m1">Menú 1</h3>
@@ -151,7 +155,7 @@
         </article>
       </section>
       <section class="section__container">
-        <h2 class="section__title">Galeria d'imatges</h2>
+        <h2 class="section__title" id="galeria">Galeria d'imatges</h2>
         <article class="gallery__container">
           <div class="image"></div>
           <div class="image"></div>
@@ -162,6 +166,22 @@
           <div class="image"></div>
           <div class="image"></div>
         </article>
+      </section>
+      <section class="section__container">
+        <h2 class="section__title" id="reservar">Reserva</h2>
+        <form action="">
+          <label for="nom">Nom <span class="required_field">*</span></label>
+          <input type="text" id="nom" name="nom" required>
+          <label for="numero_persones">Número de persones <span class="required_field">*</span></label>
+          <input type="number" id="numero_persones" name="numero_persones" value="1" min="1" required>
+          <label for="data">Data <span class="required_field">*</span></label>
+          <input type="date" id="data" name="data" required>
+          <label for="hora">Hora <span class="required_field">*</span></label>
+          <input type="time" id="hora" name="hora" required>
+          <label for="descripcio">Descripció</label>
+          <textarea name="descripcio" id="descripcio" placeholder="Altes dades addicionals..."></textarea>
+          <button type="submit">Enviar</button>
+        </form>
       </section>
       <a class="btn__reserva" href="#reservar">Reservar</a>
     </main>
