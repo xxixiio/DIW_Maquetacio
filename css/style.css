@@ -145,6 +145,12 @@ button:hover {
   width: 100%;
 }
 
+.aboutus__text {
+  padding: 0 4rem;
+  /* border: 1px dashed #000; */
+  /* border-radius: var(--border-radius); */
+}
+
 .aboutus__content {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -255,7 +261,7 @@ button:hover {
 .menu__image-text {
   opacity: 0;
   position: absolute;
-  bottom: 6px;
+  bottom: 0;
   justify-self: center;
   text-align: center;
   align-content: center;
@@ -268,7 +274,10 @@ button:hover {
 }
 
 .menu__image-container {
+  position: relative;
   width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
 
 .gallery__container {
