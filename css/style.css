@@ -1,3 +1,7 @@
+/* Variables globals utlitzats per tota la pàgina */
+/* S'utiltizen per mantenir una pàgina amb més coherencia entre tots els elements */
+/* A més de colors, es declaren els border-radius (com el redondeixen les vores) */
+/* I com es veuen totes le animaciones */
 :root {
   --bg-color: #fff;
   --primary: rgb(35, 69, 44);
@@ -16,6 +20,8 @@
   font-family: "Inter", sans-serif;
 }
 
+/* Per defecte, l'efecte scroll en els navegadors és bruta */
+/* Aquesta propietat les suavitza */
 html {
   scroll-behavior: smooth;
 }
@@ -24,6 +30,7 @@ body {
   background-color: var(--bg-color);
 }
 
+/* Donar a totes les capçeleres la mateixa font  */
 h1,
 h2,
 h3,
@@ -44,6 +51,7 @@ button:hover {
   cursor: pointer;
 }
 
+/* Secció header */
 .header__container {
   position: sticky;
   top: 0;
@@ -80,6 +88,7 @@ button:hover {
   gap: 2rem;
 }
 
+/* Secció hero */
 .hero__container {
   display: flex;
   flex-direction: column;
@@ -102,6 +111,7 @@ button:hover {
   height: 85vh;
 }
 
+/* Classe per afegir a totes les imatges */
 .image {
   object-fit: cover;
   width: 100%;
@@ -109,6 +119,7 @@ button:hover {
   border-radius: var(--border-radius);
 }
 
+/* Botó de reserva que es troba abaix a la dreta de forma fixe */
 .btn__reserva {
   position: fixed;
   background-color: var(--primary);
@@ -124,6 +135,7 @@ button:hover {
   background-color: var(--primary-hover);
 }
 
+/* Separacions entre seccions */
 .section__container {
   padding: 5rem 12%;
 }
@@ -135,6 +147,7 @@ button:hover {
   scroll-margin-top: 100px; /* Marge per que el header (fixed), no tapi els títols */
 }
 
+/* Secció Sobre nosaltres */
 .aboutus__container {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -165,6 +178,7 @@ button:hover {
   justify-items: end;
 }
 
+/* Secció de Menú */
 .carta__title {
   font-size: 1.75rem;
   border: 2px dashed #000;
@@ -188,6 +202,7 @@ button:hover {
   column-gap: 5rem;
 }
 
+/* Declaracions de Grid-areas */
 #menu-title {
   grid-area: menu-title;
 }
@@ -287,6 +302,7 @@ button:hover {
   gap: var(--gap);
 }
 
+/* Secció de Galeria */
 .gallery__container > .image {
   /* background-color: blue; */
   height: 200px;
@@ -307,6 +323,7 @@ button:hover {
   box-shadow: 0 2px 4px 3px rgba(0, 0, 0, 0.4);
 }
 
+/* Secció de reserves */
 .reservation-form__container {
   margin: 0 auto;
   padding: 2rem 8rem;
@@ -326,15 +343,19 @@ button:hover {
 #nom-grid {
   grid-area: nom-grid;
 }
+
 #numero_persones-grid {
   grid-area: numero_persones-grid;
 }
+
 #data-grid {
   grid-area: data-grid;
 }
+
 #hora-grid {
   grid-area: hora-grid;
 }
+
 #descripcio-grid {
   grid-area: descripcio-grid;
 }
@@ -390,6 +411,7 @@ button:hover {
   background-color: var(--primary-hover);
 }
 
+/* Secció de footer */
 .footer__container {
   background-color: var(--primary);
   color: var(--alt-text-color);
@@ -422,6 +444,8 @@ button:hover {
   height: 50px;
 }
 
+/* Estils per pantalles mitjanes (com tablets, iPads...) i més petits */
+/* Per aconseguir una pàgina Responsive */
 @media (max-width: 992px) {
   .aboutus__content {
     grid-template-columns: auto;
@@ -478,6 +502,8 @@ button:hover {
   }
 }
 
+/* Estils per a telèfons mòbils */
+/* Principalment es canvien mides per mostrar tota la informació possible */
 @media (max-width: 768px) {
   .header__title {
     font-size: 1.1rem;
