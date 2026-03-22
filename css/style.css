@@ -287,22 +287,22 @@ button:hover {
   gap: var(--gap);
 }
 
-.gallery__container > div {
-  background-color: blue;
+.gallery__container > .image {
+  /* background-color: blue; */
   height: 200px;
-  border: 1px solid #00000079;
+  border: 1px solid #56565679;
   width: calc(25% - var(--gap));
   transition: box-shadow var(--transition);
 }
 
 /* .gallery__container > div:nth-child(1), div:nth-child(4), div:nth-child(5), div:nth-child(8) { */
-.gallery__container > div:nth-child(4n + 1),
-.gallery__container > div:nth-child(4n) {
+.gallery__container > .image:nth-child(4n + 1),
+.gallery__container > .image:nth-child(4n) {
   /* background-color: purple; */
   filter: brightness(0.75);
 }
 
-.gallery__container > div:hover {
+.gallery__container > .image:hover {
   cursor: pointer;
   box-shadow: 0 2px 4px 3px rgba(0, 0, 0, 0.4);
 }
@@ -411,7 +411,7 @@ button:hover {
     justify-content: center;
   }
 
-  .gallery__container > div {
+  .gallery__container > .image {
     --gap: 20px;
     width: calc(50% - var(--gap));
   }
