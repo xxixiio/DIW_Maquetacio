@@ -305,8 +305,8 @@ button:hover {
 /* Secció de Galeria */
 .gallery__container > .image {
   /* background-color: blue; */
-  height: 100%;
   border: 2px solid #023b15b7;
+  height: 12rem;
   width: calc(25% - var(--gap));
   transition: box-shadow var(--transition);
 }
