@@ -238,6 +238,29 @@ a {
   gap: 2rem;
 }
 
+.menu__element {
+  position: relative;
+}
+
+.menu__element:hover > .menu__image-text {
+  opacity: 1;
+}
+
+.menu__image-text {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  justify-self: center;
+  text-align: center;
+  align-content: center;
+  color: #fff;
+  background-color: #000;
+  width: 100%;
+  height: 20%;
+  border-radius: var(--border-radius);
+  transition: opacity .12s ease-in-out;
+}
+
 .menu__image-container {
   width: 100%;
 }
