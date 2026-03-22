@@ -4,7 +4,7 @@
   --primary-hover: rgb(62, 95, 71);
   --alt-text-color: #fff;
   --border-radius: 6px;
-  --transition: .08s ease-out; 
+  --transition: 0.08s ease-out;
 }
 
 /* Estils de normalització i de layout */
@@ -12,7 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  line-height: 1.5;
+  line-height: 1.7;
   font-family: "Inter", sans-serif;
 }
 
@@ -290,7 +290,7 @@ button:hover {
 .gallery__container > .image {
   /* background-color: blue; */
   height: 200px;
-  border: 1px solid #56565679;
+  border: 2px solid #023b15b7;
   width: calc(25% - var(--gap));
   transition: box-shadow var(--transition);
 }
@@ -316,6 +316,27 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.2rem;
+
+  grid-template-areas:
+    "nom-grid numero_persones-grid"
+    "data-grid hora-grid"
+    "descripcio-grid descripcio-grid";
+}
+
+#nom-grid {
+  grid-area: nom-grid;
+}
+#numero_persones-grid {
+  grid-area: numero_persones-grid;
+}
+#data-grid {
+  grid-area: data-grid;
+}
+#hora-grid {
+  grid-area: hora-grid;
+}
+#descripcio-grid {
+  grid-area: descripcio-grid;
 }
 
 .reservation-form__field {
@@ -323,9 +344,9 @@ button:hover {
   flex-direction: column;
 }
 
-.reservation-form__field--full {
+/* .reservation-form__field--full {
   grid-column: span 2;
-}
+} */
 
 .reservation-form__label {
   margin-bottom: 0.3rem;
@@ -333,7 +354,7 @@ button:hover {
 }
 
 .reservation-form__required {
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: red;
 }
 
@@ -394,6 +415,30 @@ button:hover {
 }
 
 @media (max-width: 992px) {
+  .aboutus__content {
+    grid-template-columns: auto;
+  }
+
+  .aboutus__content--reversed {
+    grid-template-columns: auto;
+  }
+
+  .aboutus__content {
+    margin-bottom: 60px;
+  }
+
+  .aboutus__text {
+    padding: 0;
+    order: -1;
+    margin-bottom: 1rem;
+  }
+
+  .aboutus__image-container {
+    width: 80%;
+    justify-self: center;
+    padding: 0 2rem;
+  }
+
   .menu__container {
     grid-template-columns: 20% 1fr 1fr;
     grid-template-rows: 8rem auto auto auto auto auto;
@@ -426,8 +471,33 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+  .header__title {
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+
+  .header__nav {
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    flex-direction: column;
+    /* align-items: normal; */
+    gap: 0.5rem;
+  }
+
+  .header__link {
+    font-size: 0.9rem;
+  }
+
+  .hero__text {
+    margin: 1rem;
+  }
+
+  .aboutus__image-container {
+    width: 100%;
+  }
+
   .section__container {
-    padding: 5rem 1rem;
+    padding: 3rem 1rem;
   }
 
   .menu__element {
@@ -450,11 +520,20 @@ button:hover {
       "menu2 menu2"
       "content2 content2"
       "pic3 pic4";
-      row-gap: 3rem;
-      column-gap: 1rem;
+    row-gap: 3rem;
+    column-gap: 1rem;
   }
 
-  .reservation-form {
-    grid-template-columns: 1fr;
+  .reservation-form__grid {
+    grid-template-areas:
+      "nom-grid nom-grid"
+      "numero_persones-grid numero_persones-grid"
+      "data-grid hora-grid"
+      "descripcio-grid descripcio-grid";
+  }
+
+  .footer__list {
+    gap: 1rem;
+    flex-direction: column;
   }
 }
