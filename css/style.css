@@ -124,10 +124,10 @@ button:hover {
   position: fixed;
   background-color: var(--primary);
   color: #fff;
-  padding: 8px 12px;
+  padding: .5rem 1rem;
   border-radius: var(--border-radius);
-  bottom: 32px;
-  right: 32px;
+  bottom: 2.6rem;
+  right: 2.6rem;
   transition: background var(--transition);
 }
 
@@ -166,15 +166,15 @@ button:hover {
 
 .aboutus__content {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 30% 1fr;
   gap: 20px;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   justify-items: start;
 }
 
 .aboutus__content--reversed {
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 30%;
   justify-items: end;
 }
 
@@ -266,7 +266,7 @@ button:hover {
 
 .menu__element {
   position: relative;
-  min-width: 250px;
+  min-width: 15rem;
 }
 
 .menu__element:hover > .menu__image-text {
@@ -291,7 +291,7 @@ button:hover {
 .menu__image-container {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -305,7 +305,7 @@ button:hover {
 /* Secció de Galeria */
 .gallery__container > .image {
   /* background-color: blue; */
-  height: 200px;
+  height: 100%;
   border: 2px solid #023b15b7;
   width: calc(25% - var(--gap));
   transition: box-shadow var(--transition);
@@ -428,7 +428,7 @@ button:hover {
 
 .footer__element {
   display: flex;
-  gap: 8px;
+  gap: .5rem;
 }
 
 .footer__link {
@@ -440,8 +440,8 @@ button:hover {
 }
 
 .footer__logo {
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
 }
 
 /* Estils per pantalles mitjanes (com tablets, iPads...) i més petits */
@@ -456,7 +456,7 @@ button:hover {
   }
 
   .aboutus__content {
-    margin-bottom: 60px;
+    margin-bottom: 5rem;
   }
 
   .aboutus__text {
@@ -506,7 +506,7 @@ button:hover {
 /* Principalment es canvien mides per mostrar tota la informació possible */
 @media (max-width: 768px) {
   .header__title {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     white-space: nowrap;
   }
 
