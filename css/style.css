@@ -160,20 +160,20 @@ a {
   border-radius: var(--border-radius);
   margin-bottom: 3rem;
   text-align: center;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .menu__container {
   display: grid;
   grid-template-columns: 20% 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "m1 c1 c1"
     "m1 c1 c1"
     "m2 c2 c2"
     "m2 c2 c2";
-    row-gap: 3rem;
-    column-gap: 5rem;
+  row-gap: 3rem;
+  column-gap: 5rem;
 }
 
 #m1 {
@@ -232,13 +232,14 @@ a {
   height: 200px;
   border: 1px solid #00000079;
   width: calc(25% - var(--gap));
-  transition: box-shadow .12s ease-out;
+  transition: box-shadow 0.12s ease-out;
 }
 
 /* .gallery__container > div:nth-child(1), div:nth-child(4), div:nth-child(5), div:nth-child(8) { */
-.gallery__container > div:nth-child(4n + 1), div:nth-child(4n) {
+.gallery__container > div:nth-child(4n + 1),
+.gallery__container > div:nth-child(4n) {
   /* background-color: purple; */
-  filter: brightness(.75);
+  filter: brightness(0.75);
 }
 
 .gallery__container > div:hover {
@@ -246,11 +247,52 @@ a {
   box-shadow: 0 2px 4px 3px rgba(0, 0, 0, 0.4);
 }
 
-@media (max-width: 700px) {
-  .gallery__container > div {
-    --gap: 20px;
-    width: calc(50% - var(--gap));
-  }
+.reservation-form {
+  margin: 0 auto;
+  padding: 2rem 8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.reservation-form__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.reservation-form__field--full {
+  grid-column: span 2;
+}
+
+.reservation-form__label {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.reservation-form__required {
+  color: red;
+}
+
+.reservation-form__input,
+.reservation-form__textarea {
+  padding: 0.5rem;
+  border: 1px solid #999;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+}
+
+.reservation-form__textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.reservation-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.reservation-form__button {
 }
 
 .footer__container {
@@ -275,4 +317,25 @@ a {
 
 .footer__link:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .gallery__container > div {
+    --gap: 20px;
+    width: calc(50% - var(--gap));
+  }
+
+  .reservation-form {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section__container {
+    padding: 5rem 1rem;
+  }
+
+  .reservation-form {
+    grid-template-columns: 1fr;
+  }
 }
