@@ -376,7 +376,7 @@ button:hover {
 
 .reservation-form__required {
   font-size: 0.8rem;
-  color: red;
+  color: rgb(190, 0, 0);
 }
 
 .reservation-form__input,
