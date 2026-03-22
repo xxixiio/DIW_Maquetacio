@@ -158,38 +158,59 @@ a {
   font-size: 1.75rem;
   border: 2px dashed #000;
   border-radius: var(--border-radius);
-  margin-bottom: 3rem;
   text-align: center;
+  align-self: center;
   padding: 0.5rem;
 }
 
 .menu__container {
   display: grid;
   grid-template-columns: 20% 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 8rem auto auto auto auto;
   grid-template-areas:
-    "m1 c1 c1"
-    "m1 c1 c1"
-    "m2 c2 c2"
-    "m2 c2 c2";
+    "menu-title menu-title menu-title"
+    "menu1 content1 content1"
+    "menu1 pic1 pic2"
+    "menu2 content2 content2"
+    "menu2 pic3 pic4";
   row-gap: 3rem;
   column-gap: 5rem;
 }
 
-#m1 {
-  grid-area: m1;
+#menu-title {
+  grid-area: menu-title;
 }
 
-#c1 {
-  grid-area: c1;
+#menu1 {
+  grid-area: menu1;
 }
 
-#m2 {
-  grid-area: m2;
+#menu2 {
+  grid-area: menu2;
 }
 
-#c2 {
-  grid-area: c2;
+#content1 {
+  grid-area: content1;
+}
+
+#content2 {
+  grid-area: content2;
+}
+
+#pic1 {
+  grid-area: pic1;
+}
+
+#pic2 {
+  grid-area: pic2;
+}
+
+#pic3 {
+  grid-area: pic3;
+}
+
+#pic4 {
+  grid-area: pic4;
 }
 
 .menu__title {
@@ -200,6 +221,7 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 1.2rem;
   border: 1px dashed #000;
   border-radius: var(--border-radius);
 }

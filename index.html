@@ -87,10 +87,10 @@
       </section>
       <section class="section__container">
         <h2 class="section__title" id="carta">Carta</h2>
-        <h3 class="carta__title">Menú</h3>
         <article class="menu__container">
-          <h3 class="menu__title" id="m1">Menú 1</h3>
-          <div id="c1">
+          <h3 class="carta__title" id="menu-title">Menú</h3>
+          <h4 class="menu__title" id="menu1">Menú 1</h4>
+          <div id="content1">
             <h4 class="menu__info-title">Contingut</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
@@ -98,31 +98,21 @@
               inventore consequatur iusto. Sed voluptate modi voluptatum
               explicabo esse. Nesciunt, doloribus maxime.
             </p>
-            <div class="menu__images">
-              <div>
-                <div class="menu__image-container">
-                  <img
-                    class="image"
-                    src="img/hero-image-restaurant.jpg"
-                    alt=""
-                  />
-                </div>
-                <p>Pasta</p>
-              </div>
-              <div>
-                <div class="menu__image-container">
-                  <img
-                    class="image"
-                    src="img/hero-image-restaurant.jpg"
-                    alt=""
-                  />
-                </div>
-                <p>Entrants</p>
-              </div>
-            </div>
           </div>
-          <h3 class="menu__title" id="m2">Menú 2</h3>
-          <div id="c2">
+          <div id="pic1">
+            <div class="menu__image-container">
+              <img class="image" src="img/hero-image-restaurant.jpg" alt="" />
+            </div>
+            <p>Pasta</p>
+          </div>
+          <div id="pic2">
+            <div class="menu__image-container">
+              <img class="image" src="img/hero-image-restaurant.jpg" alt="" />
+            </div>
+            <p>Entrants</p>
+          </div>
+          <h4 class="menu__title" id="menu2">Menú 2</h4>
+          <div id="content2">
             <h4 class="menu__info-title">Contingut</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
@@ -130,28 +120,18 @@
               inventore consequatur iusto. Sed voluptate modi voluptatum
               explicabo esse. Nesciunt, doloribus maxime.
             </p>
-            <div class="menu__images">
-              <div>
-                <div class="menu__image-container">
-                  <img
-                    class="image"
-                    src="img/hero-image-restaurant.jpg"
-                    alt=""
-                  />
-                </div>
-                <p>Pasta</p>
-              </div>
-              <div>
-                <div class="menu__image-container">
-                  <img
-                    class="image"
-                    src="img/hero-image-restaurant.jpg"
-                    alt=""
-                  />
-                </div>
-                <p>Entrants</p>
-              </div>
+          </div>
+          <div id="pic3">
+            <div class="menu__image-container">
+              <img class="image" src="img/hero-image-restaurant.jpg" alt="" />
             </div>
+            <p>Pasta</p>
+          </div>
+          <div id="pic4">
+            <div class="menu__image-container">
+              <img class="image" src="img/hero-image-restaurant.jpg" alt="" />
+            </div>
+            <p>Entrants</p>
           </div>
         </article>
       </section>
@@ -171,68 +151,67 @@
       <section class="section__container">
         <h2 class="section__title" id="reservar">Reserva</h2>
         <form class="reservation-form">
-            <div class="reservation-form__field">
-              <label for="nom" class="reservation-form__label">
-                Nom <span class="reservation-form__required">*</span>
-              </label>
-              <input
-                type="text"
-                id="nom"
-                name="nom"
-                class="reservation-form__input"
-                required
-              />
-            </div>
-            <div class="reservation-form__field">
-              <label for="numero_persones" class="reservation-form__label">
-                Número de persones
-                <span class="reservation-form__required">*</span>
-              </label>
-              <input
-                type="number"
-                id="numero_persones"
-                name="numero_persones"
-                class="reservation-form__input"
-                value="1"
-                min="1"
-                required
-              />
-            </div>
-            <div class="reservation-form__field">
-              <label for="data" class="reservation-form__label">
-                Data <span class="reservation-form__required">*</span>
-              </label>
-              <input
-                type="date"
-                id="data"
-                name="data"
-                class="reservation-form__input"
-                required
-              />
-            </div>
-            <div class="reservation-form__field">
-              <label for="hora" class="reservation-form__label">
-                Hora <span class="reservation-form__required">*</span>
-              </label>
-              <input
-                type="time"
-                id="hora"
-                name="hora"
-                class="reservation-form__input"
-                required
-              />
-            </div>
-            <div class="reservation-form__field reservation-form__field--full">
-              <label for="descripcio" class="reservation-form__label"
-                >Descripció</label
-              >
-              <textarea
-                id="descripcio"
-                name="descripcio"
-                class="reservation-form__textarea"
-                placeholder="Altres dades addicionals..."
-              ></textarea>
-            </div>
+          <div class="reservation-form__field">
+            <label for="nom" class="reservation-form__label">
+              Nom <span class="reservation-form__required">*</span>
+            </label>
+            <input
+              type="text"
+              id="nom"
+              name="nom"
+              class="reservation-form__input"
+              required
+            />
+          </div>
+          <div class="reservation-form__field">
+            <label for="numero_persones" class="reservation-form__label">
+              Número de persones
+              <span class="reservation-form__required">*</span>
+            </label>
+            <input
+              type="number"
+              id="numero_persones"
+              name="numero_persones"
+              class="reservation-form__input"
+              value="1"
+              min="1"
+              required
+            />
+          </div>
+          <div class="reservation-form__field">
+            <label for="data" class="reservation-form__label">
+              Data <span class="reservation-form__required">*</span>
+            </label>
+            <input
+              type="date"
+              id="data"
+              name="data"
+              class="reservation-form__input"
+              required
+            />
+          </div>
+          <div class="reservation-form__field">
+            <label for="hora" class="reservation-form__label">
+              Hora <span class="reservation-form__required">*</span>
+            </label>
+            <input
+              type="time"
+              id="hora"
+              name="hora"
+              class="reservation-form__input"
+              required
+            />
+          </div>
+          <div class="reservation-form__field reservation-form__field--full">
+            <label for="descripcio" class="reservation-form__label"
+              >Descripció</label
+            >
+            <textarea
+              id="descripcio"
+              name="descripcio"
+              class="reservation-form__textarea"
+              placeholder="Altres dades addicionals..."
+            ></textarea>
           </div>
           <div class="reservation-form__actions">
             <button type="submit" class="reservation-form__button">
