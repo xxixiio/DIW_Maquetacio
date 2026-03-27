@@ -446,7 +446,7 @@ button:hover {
 
 /* Estils per pantalles mitjanes (com tablets, iPads...) i més petits */
 /* Per aconseguir una pàgina Responsive */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .aboutus__content {
     grid-template-columns: auto;
   }
@@ -504,7 +504,7 @@ button:hover {
 
 /* Estils per a telèfons mòbils */
 /* Principalment es canvien mides per mostrar tota la informació possible */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .header__container {
     position: relative;
   }
