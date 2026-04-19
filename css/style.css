@@ -597,7 +597,7 @@ button:hover {
     column-gap: 1rem;
   }
 
-  .gallery__container > image {
+  .gallery__container > .image {
     width: 100%;
   }
 
