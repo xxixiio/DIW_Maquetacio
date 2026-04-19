@@ -148,34 +148,28 @@ button:hover {
 }
 
 /* Secció Sobre nosaltres */
-.aboutus__container {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.aboutus__image-container {
-  width: 100%;
-}
-
-.aboutus__text {
-  padding: 0 4rem;
-  /* border: 1px dashed #000; */
-  /* border-radius: var(--border-radius); */
-}
-
 .aboutus__content {
   display: grid;
+  grid-template-areas: "aboutus-image aboutus-text";
   grid-template-columns: 30% 1fr;
   gap: 20px;
   align-items: center;
   margin-bottom: 2.5rem;
-  justify-items: start;
 }
 
 .aboutus__content--reversed {
+  grid-template-areas: "aboutus-text aboutus-image";
   grid-template-columns: 1fr 30%;
-  justify-items: end;
+}
+
+.aboutus__image-container {
+  grid-area: aboutus-image;
+  width: 100%;
+}
+
+.aboutus__text {
+  grid-area: aboutus-text;
+  padding: 0 4rem;
 }
 
 /* Secció de Menú */
@@ -447,28 +441,41 @@ button:hover {
 /* Estils per pantalles mitjanes (com tablets, iPads...) i més petits */
 /* Per aconseguir una pàgina Responsive */
 @media (max-width: 768px) {
-  .aboutus__content {
-    grid-template-columns: auto;
+  .header__nav {
+    flex-direction: column;
   }
 
-  .aboutus__content--reversed {
-    grid-template-columns: auto;
+  .hero__text {
+    text-align: center;
+    padding: 3rem;
+    margin: 0;
+    align-self: center;
   }
 
   .aboutus__content {
     margin-bottom: 5rem;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 100%;
+    grid-template-areas: "aboutus-image"
+                         "aboutus-text";
+  }
+
+  .aboutus__content--reversed {
+    margin-bottom: 0;
+    grid-template-rows: 100%;
+    grid-template-columns: 40% 1fr;
+    grid-template-areas: "aboutus-image aboutus-text";
+    column-gap: 3rem;
   }
 
   .aboutus__text {
     padding: 0;
-    order: -1;
     margin-bottom: 1rem;
   }
 
   .aboutus__image-container {
-    width: 80%;
+    width: 100%;
     justify-self: center;
-    padding: 0 2rem;
   }
 
   .menu__container {
@@ -499,6 +506,14 @@ button:hover {
 
   .reservation-form {
     padding: 2rem 0;
+  }
+
+  .footer__container {
+    justify-content: center;
+  }
+
+  .footer__logo {
+    display: none;
   }
 }
 
