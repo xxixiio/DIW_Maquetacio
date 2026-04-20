@@ -302,7 +302,7 @@ button:hover {
   border: 2px solid #023b15b7;
   height: 12rem;
   width: calc(25% - var(--gap));
-  transition: box-shadow var(--transition);
+  transition: all var(--transition);
 }
 
 /* .gallery__container > div:nth-child(1), div:nth-child(4), div:nth-child(5), div:nth-child(8) { */
@@ -315,6 +315,9 @@ button:hover {
 .gallery__container > .image:hover {
   cursor: pointer;
   box-shadow: 0 2px 4px 3px rgba(0, 0, 0, 0.4);
+
+  transform: scale(1.08) rotate(6deg);
+  filter: grayscale(.5)
 }
 
 /* Secció de reserves */
