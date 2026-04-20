@@ -3,7 +3,17 @@
 Pràctica desenvolupada per a l’assignatura de **Disseny d’Interfícies Web (DIW)**.
 L’objectiu és aplicar tècniques de maquetació moderna amb HTML i CSS, fent especial èmfasi en la presentació visual i la interacció amb l’usuari.
 
+## Branques
+
+* **main**
+  Versió final del projecte.
+* **css_responsive**
+  Pràctica 10: implementació d’estils responsive per adaptar el disseny a diferents dispositius.
+* **multimedia**
+  Pràctica 11: incorporació de transicions, animacions i contingut multimèdia (vídeo).
+
 ## Transicions
+
 Totes les transicions tenen una variable per l'estandarització en tota la pàgina.
 ```css
 :root {
@@ -11,8 +21,7 @@ Totes les transicions tenen una variable per l'estandarització en tota la pàgi
 }
 ```
 
-- Classe `.imatge`. 
-    - Per les imatges dins de la galeria de fotos
+- Classe `.imatge`. Per les imatges dins de la galeria de fotos
 
 ```css
 .imatge:hover {
