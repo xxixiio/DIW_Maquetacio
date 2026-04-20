@@ -4,6 +4,12 @@ Pràctica desenvolupada per a l’assignatura de **Disseny d’Interfícies Web 
 L’objectiu és aplicar tècniques de maquetació moderna amb HTML i CSS, fent especial èmfasi en la presentació visual i la interacció amb l’usuari.
 
 ## Transicions
+Totes les transicions tenen una variable per l'estandarització en tota la pàgina.
+```css
+:root {
+  --transition: 0.08s ease-out;
+}
+```
 
 - Classe `.imatge`. 
     - Per les imatges dins de la galeria de fotos
