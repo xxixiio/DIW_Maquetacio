@@ -121,6 +121,7 @@ button:hover {
 
 /* Botó de reserva que es troba abaix a la dreta de forma fixe */
 .btn__reserva {
+  z-index: 100;
   position: fixed;
   background-color: var(--primary);
   color: #fff;
