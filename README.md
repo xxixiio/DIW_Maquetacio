@@ -1,10 +1,12 @@
-# DIW Maquetació [Restaurant Els Coberts]
+# DIW Maquetació – Restaurant Els Coberts
 
-Practica per l'assignatura de Disseny d'Interficies Web.
+Pràctica desenvolupada per a l’assignatura de **Disseny d’Interfícies Web (DIW)**.
+L’objectiu és aplicar tècniques de maquetació moderna amb HTML i CSS, fent especial èmfasi en la presentació visual i la interacció amb l’usuari.
 
 ## Transicions
 
-- Classe `.imatge`. Per les imatges dins de la galeria de fotos.
+- Classe `.imatge`. 
+    - Per les imatges dins de la galeria de fotos
 
 ```css
 .imatge:hover {
