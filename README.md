@@ -21,7 +21,7 @@ Totes les transicions tenen una variable per l'estandarització en tota la pàgi
 }
 ```
 
-- Classe `.imatge`. Per les imatges dins de la galeria de fotos
+- Classe `.image`. Per les imatges dins de la galeria de fotos
 
 ```css
 .imatge:hover {
@@ -35,7 +35,27 @@ Totes les transicions tenen una variable per l'estandarització en tota la pàgi
 }
 ```
 
-- 2
+- Classe `.menu__element` i `.menu__image`.
+
+```css
+.menu__element {
+  filter: brightness(.7);
+  transition: all var(--transition);
+}
+
+.menu__element:hover {
+  transform: translateY(-1rem) rotate(1deg);
+  filter: brightness(1);
+}
+
+.menu__element:hover > .menu__image-text {
+  opacity: 1;
+}
+
+.menu__image-text {
+  opacity: 0;
+  transition: opacity var(--transition);
+}```
 
 ## Animacions
 
@@ -52,7 +72,7 @@ Totes les transicions tenen una variable per l'estandarització en tota la pàgi
   from {
     opacity: 0%;
     transform: translateY(2rem);
-    color: #f4c107;
+    color: orange;
   } 
   to {
     transform: translateY(0);
@@ -61,4 +81,33 @@ Totes les transicions tenen una variable per l'estandarització en tota la pàgi
 }
 ```
 
-- 2
+- Classe `.btn__reserva`.
+
+```css
+.btn__reserva:hover {
+  animation-name: reservar-animacio;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes reservar-animacio {
+  0% {
+    background-color: var(--primary);
+    transform: scale(1) translate(0, 0) rotate(0);
+  }
+  
+  25% {
+    background-color: rgb(97, 12, 22);
+    transform: scale(1.2) translate(10px, -10px) rotate(10deg);
+  }
+  
+  50% {
+    background-color: rgb(1, 52, 94);
+  }
+  
+  100% {
+    background-color: #6d8d16;
+    transform: scale(1.2) translate(-10px, 10px) rotate(-10deg);
+  }
+}```
