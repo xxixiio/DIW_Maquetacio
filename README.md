@@ -39,6 +39,26 @@ Totes les transicions tenen una variable per l'estandarització en tota la pàgi
 
 ## Animacions
 
-- 1
+- Classe `.hero__text`.
+
+```css
+.hero__text {
+  opacity: 0.9;
+  animation-name: hero-animation;
+  animation-duration: .6s;
+}
+
+@keyframes hero-animation {
+  from {
+    opacity: 0%;
+    transform: translateY(2rem);
+    color: #f4c107;
+  } 
+  to {
+    transform: translateY(0);
+    color: #fff;
+  }
+}
+```
 
 - 2

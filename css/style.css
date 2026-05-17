@@ -104,6 +104,20 @@ button:hover {
   padding-right: 7rem;
   margin-left: 3rem;
   border-radius: var(--border-radius);
+  animation-name: hero-animation;
+  animation-duration: .6s;
+}
+
+@keyframes hero-animation {
+  from {
+    opacity: 0%;
+    transform: translateY(2rem);
+    color: #f4c107;
+  } 
+  to {
+    transform: translateY(0);
+    color: #fff;
+  }
 }
 
 .hero__image-container {
