@@ -67,6 +67,11 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1.2rem 3rem;
+  transition: all var(--transition);
+}
+
+.header__nav--active {
   padding: 0.5rem 2.5rem;
 }
 
@@ -75,12 +80,26 @@ button:hover {
 }
 
 .header__title {
+  font-size: 2rem;
   color: var(--primary);
+  transition: font-size var(--transition);
+}
+
+.header__title--active {
+  font-size: 1.6rem;
 }
 
 .header__link > a:hover {
   /* color: var(--primary); */
   text-decoration: underline;
+}
+
+.header__link > a {
+  font-size: 1.2rem;
+}
+
+.header__link--active > a {
+  font-size: 1rem;
 }
 
 .header__list {
@@ -95,6 +114,7 @@ button:hover {
   justify-content: center;
 }
 
+/* ANIMACIÓ AQUI */
 .hero__text {
   position: absolute;
   background-color: var(--primary);
@@ -104,6 +124,20 @@ button:hover {
   padding-right: 7rem;
   margin-left: 3rem;
   border-radius: var(--border-radius);
+  animation-name: hero-animation;
+  animation-duration: .6s;
+}
+
+@keyframes hero-animation {
+  from {
+    opacity: 0%;
+    transform: translateY(2rem);
+    color: orange;
+  } 
+  to {
+    transform: translateY(0);
+    color: #fff;
+  }
 }
 
 .hero__image-container {
@@ -121,6 +155,7 @@ button:hover {
 
 /* Botó de reserva que es troba abaix a la dreta de forma fixe */
 .btn__reserva {
+  z-index: 100;
   position: fixed;
   background-color: var(--primary);
   color: #fff;
@@ -131,8 +166,34 @@ button:hover {
   transition: background var(--transition);
 }
 
+/* ANIMACIÓ AQUI */
 .btn__reserva:hover {
-  background-color: var(--primary-hover);
+  /* background-color: var(--primary-hover); */
+  animation-name: reservar-animacio;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes reservar-animacio {
+  0% {
+    background-color: var(--primary);
+    transform: scale(1) translate(0, 0) rotate(0);
+  }
+  
+  25% {
+    background-color: rgb(97, 12, 22);
+    transform: scale(1.2) translate(10px, -10px) rotate(10deg);
+  }
+  
+  50% {
+    background-color: rgb(1, 52, 94);
+  }
+  
+  100% {
+    background-color: #6d8d16;
+    transform: scale(1.2) translate(-10px, 10px) rotate(-10deg);
+  }
 }
 
 /* Separacions entre seccions */
@@ -258,9 +319,17 @@ button:hover {
   gap: 2rem;
 }
 
+/* TRANSICIÓ AQUI */
 .menu__element {
   position: relative;
   min-width: 15rem;
+  filter: brightness(.7);
+  transition: all var(--transition);
+}
+
+.menu__element:hover {
+  transform: translateY(-1rem) rotate(1deg);
+  filter: brightness(1);
 }
 
 .menu__element:hover > .menu__image-text {
@@ -302,7 +371,7 @@ button:hover {
   border: 2px solid #023b15b7;
   height: 12rem;
   width: calc(25% - var(--gap));
-  transition: box-shadow var(--transition);
+  transition: all var(--transition);
 }
 
 /* .gallery__container > div:nth-child(1), div:nth-child(4), div:nth-child(5), div:nth-child(8) { */
@@ -312,9 +381,47 @@ button:hover {
   filter: brightness(0.75);
 }
 
+/* TRANSICIÓ AQUI */
 .gallery__container > .image:hover {
   cursor: pointer;
   box-shadow: 0 2px 4px 3px rgba(0, 0, 0, 0.4);
+
+  transform: scale(1.08) rotate(6deg);
+  filter: grayscale(.5);
+  z-index: 1;
+}
+
+/* Secció video */
+.video__container {
+  position: relative;
+}
+
+.video__video {
+  width: 80%;
+  display: block;
+  margin: auto;
+  border-radius: var(--border-radius);
+}
+
+.video__control {
+  filter: invert(1);
+}
+
+.video__control:hover {
+  cursor: pointer;
+}
+
+.video__overlay {
+  position: absolute;
+  padding: .5rem 2rem;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: var(--border-radius);
 }
 
 /* Secció de reserves */
