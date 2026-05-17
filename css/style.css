@@ -67,7 +67,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 3.5rem;
+  padding: 1.2rem 3rem;
   transition: all var(--transition);
 }
 
@@ -92,6 +92,14 @@ button:hover {
 .header__link > a:hover {
   /* color: var(--primary); */
   text-decoration: underline;
+}
+
+.header__link > a {
+  font-size: 1.2rem;
+}
+
+.header__link--active > a {
+  font-size: 1rem;
 }
 
 .header__list {
@@ -348,9 +356,34 @@ button:hover {
 }
 
 /* Secció video */
+.video__container {
+  position: relative;
+}
+
 .video__video {
-  width: 100%;
-  padding: 1rem;
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+.video__control {
+  filter: invert(1);
+}
+
+.video__control:hover {
+  cursor: pointer;
+}
+
+.video__overlay {
+  position: absolute;
+  padding: .5rem 2rem;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /* Secció de reserves */

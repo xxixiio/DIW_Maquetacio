@@ -30,6 +30,7 @@
         <ul class="header__list">
           <li class="header__link"><a href="#nosaltres">Nosaltres</a></li>
           <li class="header__link"><a href="#carta">Carta</a></li>
+          <li class="header__link"><a href="#videos">Video</a></li>
           <li class="header__link"><a href="#galeria">Galeria</a></li>
         </ul>
       </nav>
@@ -171,12 +172,19 @@
       </section>
       <!-- Secció de video -->
         <section class="section__container">
-        <h2 class="section__title" id="galeria">Videos del restaurant</h2>
+        <h2 class="section__title" id="videos">Videos del restaurant</h2>
         <article class="video__container">
-          <video class="video__video" controls muted>
-            <source src="" type="video/mp4">
+          <video id="video-restaurant" class="video__video" muted autoplay>
+            <source src="img/video-restaurant.mp4" type="video/mp4">
             El teu navegador no suporta l'etiqueta de video.
           </video>
+
+          <div class="video__overlay">
+            <span id="video-control-play" class="material-icons video__control">play_circle</span>
+            <span id="video-control-pause" class="material-icons video__control">pause_circle</span>
+            <span id="video-control-unmute" class="material-icons video__control">volume_up</span>
+            <span id="video-control-mute" class="material-icons video__control">volume_off</span>
+          </div>
         </article>
       </section>
       <!-- Secció de reserva -->
